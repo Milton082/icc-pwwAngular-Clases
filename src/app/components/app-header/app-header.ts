@@ -9,7 +9,7 @@ import { ChangeDetectionStrategy, Component, computed, signal } from '@angular/c
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 
-export class AppHeader {
+export class AppHeaderComponent {
   readonly brand = signal('PPW Angular');
   readonly showInfo = signal(false);
   readonly toggleLabel = computed(() => (this.showInfo() ? 'Ocultar info' : 'Mostrar info'));
