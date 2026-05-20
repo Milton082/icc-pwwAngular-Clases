@@ -1,9 +1,13 @@
-/* You can add global styles to this file, and also import other style files */
-:root{
-    font-family: inter, system-ul, san-serif;
-    color:#172033;
-    background: #f5f7fb;
+@import "tailwindcss";
+
+@theme {
+  --color-brand: #0f4c81;
+  --color-brand-strong: #0b3a66;
+  --color-surface: #ffffff;
 }
-body{
-margin: 0%;
+
+@layer base {
+  body {
+    @apply bg-slate-100;
+  }
 }

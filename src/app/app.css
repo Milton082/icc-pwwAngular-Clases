@@ -1,9 +1,4 @@
-/*
-  :host representa el componente principal de la aplicación.
 
-  Este bloque convierte al componente raíz en un contenedor vertical
-  que ocupa como mínimo toda la altura de la pantalla.
-*/
 :host {
     min-height: 100vh;
     display: flex;
