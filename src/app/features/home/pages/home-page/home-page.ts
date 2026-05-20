@@ -1,5 +1,5 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { AppHeroComponent } from "../../../../app/components/app-hero/app-hero";
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import { AppHeroComponent } from "../../../../components/app-hero/app-hero";
 import { Router } from '@angular/router';
 import { StudentPage } from "../../../students/pages/student-page/student-page";
 
@@ -12,10 +12,11 @@ import { StudentPage } from "../../../students/pages/student-page/student-page";
 
 export class HomePage {
 
-  constructor(private router: Router) {}
+   private router = inject(Router);
 
-  goToStudentsPage() {
+  goToStudentsPage(): void {
     this.router.navigate(['/students']);
   }
 
 }
+
