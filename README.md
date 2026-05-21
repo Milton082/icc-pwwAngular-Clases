@@ -18,7 +18,7 @@ A lo largo de la práctica se implementaron múltiples distribuciones visuales u
 * **Comentario en código:** Incluido en la cabecera del `<article>` correspondiente.
 * **Captura de pantalla:**
 
-  ![Timeline Vertical](assets/01-layout.png)
+  ![Timeline Vertical](assets/02-layout-01.png)
 
 ---
 
@@ -27,7 +27,7 @@ A lo largo de la práctica se implementaron múltiples distribuciones visuales u
 * **Comentario en código:** Incluido en la cabecera del `<article>` correspondiente.
 * **Captura de pantalla:**
 
-  ![Bento Grid](assets/02-layout.png)
+  ![Bento Grid](assets/02-layout-02.png)
 
 ---
 
@@ -36,7 +36,7 @@ A lo largo de la práctica se implementaron múltiples distribuciones visuales u
 * **Comentario en código:** Incluido en la cabecera del `<article>` correspondiente.
 * **Captura de pantalla:**
 
-  ![Sidebar Responsive](assets/03-layout.png)
+  ![Sidebar Responsive](assets/02-layout-03.png)
 
 ---
 
@@ -45,11 +45,11 @@ A lo largo de la práctica se implementaron múltiples distribuciones visuales u
 * **Comentario en código:** Incluido en la cabecera del `<article>` correspondiente.
 * **Captura de pantalla:**
 
-  ![Masonry Cards](assets/04-layout.png)
+  ![Masonry Cards](assets/02-layout-04.png)
 
 ---
 
-# __Práctica: Formularios Reactivos y Validaciones en Angular__
+# __Práctica: Formularios Reactivos y Validaciones en Angular (A)__
 
 ## Descripción General
 
@@ -71,11 +71,33 @@ Además, se utilizó TailwindCSS para diseñar una interfaz moderna y responsive
 ### Formulario con errores de validación
 * **Descripción:** Se muestran los distintos mensajes de error generados por las validaciones síncronas del formulario, incluyendo campos requeridos, formato inválido de email y contraseñas incorrectas.
 * **Captura:**
-  ![Errores Formulario](assets/05-errores-form.png)
+  ![Errores Formulario](assets/05-errores-form-01.png)
 
 ---
 
 ### Validación asíncrona del email
 * **Descripción:** Se muestra el mensaje de error generado por la validación asíncrona cuando el usuario ingresa un correo electrónico previamente registrado.
 * **Captura:**
-  ![Email Async Validation](assets/06-verificacion_email.png)
+  ![Email Async Validation](assets/05-verificacion_email-02.png)
+
+# __Práctica: Formularios Reactivos y Validaciones (B)__
+
+## Descripción General
+
+Construir un formulario reactivo básico (nombre, edad y correo electrónico) utilizando Angular Reactive Forms, aplicando validadores built-in como `required`, `email`, `min` y `minLength`. Además, se implementó una clase utilitaria `FormUtils` para reutilizar la lógica de validación y centralizar la generación de mensajes de error dinámicos dentro de la aplicación.
+
+---
+
+## Capturas de Pantalla
+
+### Estado inicial del formulario
+* **Descripción:** Vista inicial del formulario antes de ingresar información, mostrando los campos listos para ser completados por el usuario.
+* **Captura:**
+  ![Formulario Inicial](assets/05-estado-required-03.png)
+
+---
+
+### Formulario con errores visibles
+* **Descripción:** Se muestran los mensajes de error generados por las validaciones después de intentar enviar el formulario con datos inválidos o incompletos al mismo tiempo se muetra la salida en consola de cuando los datos son rellenados correctamente.
+* **Captura:**
+  ![Formulario con errores](assets/05-errores-form-04.png)

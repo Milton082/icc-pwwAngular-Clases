@@ -5,13 +5,15 @@ import { StudentDetailPage } from './features/students/pages/student-detail-page
 import { StudentPage } from './features/students/pages/student-page/student-page';
 import { LayoutsPage } from './features/layouts/pages/layouts-page/layouts-page';
 import { SignupPage } from './features/sign-up/page/signup-page/signup-page';
+import {ProfilePage } from './features/profile/pages/profile-page/profile-page';
 
 export const routes: Routes = [
   { path: ' ', component: HomePage },
   { path: 'students', component: StudentPage },
   { path: 'students/:id', component: StudentDetailPage },
-  { path: 'layouts', component: LayoutsPage }, // <-- DEBE ESTAR AQUÍ
+  { path: 'layouts', component: LayoutsPage }, 
   { path: 'signup', component: SignupPage },
+  { path: 'profile', component: ProfilePage },
   //redireccionamiento
   { path: '**', redirectTo: ' ' },
 ];
