@@ -71,6 +71,7 @@ Además, se utilizó TailwindCSS para diseñar una interfaz moderna y responsive
 ### Formulario con errores de validación
 * **Descripción:** Se muestran los distintos mensajes de error generados por las validaciones síncronas del formulario, incluyendo campos requeridos, formato inválido de email y contraseñas incorrectas.
 * **Captura:**
+
   ![Errores Formulario](assets/05-errores-form-01.png)
 
 ---
@@ -78,6 +79,7 @@ Además, se utilizó TailwindCSS para diseñar una interfaz moderna y responsive
 ### Validación asíncrona del email
 * **Descripción:** Se muestra el mensaje de error generado por la validación asíncrona cuando el usuario ingresa un correo electrónico previamente registrado.
 * **Captura:**
+
   ![Email Async Validation](assets/05-verificacion_email-02.png)
 
 # __Práctica: Formularios Reactivos y Validaciones (B)__
@@ -93,6 +95,7 @@ Construir un formulario reactivo básico (nombre, edad y correo electrónico) ut
 ### Estado inicial del formulario
 * **Descripción:** Vista inicial del formulario antes de ingresar información, mostrando los campos listos para ser completados por el usuario.
 * **Captura:**
+
   ![Formulario Inicial](assets/05-estado-required-03.png)
 
 ---
@@ -100,4 +103,46 @@ Construir un formulario reactivo básico (nombre, edad y correo electrónico) ut
 ### Formulario con errores visibles
 * **Descripción:** Se muestran los mensajes de error generados por las validaciones después de intentar enviar el formulario con datos inválidos o incompletos al mismo tiempo se muetra la salida en consola de cuando los datos son rellenados correctamente.
 * **Captura:**
+
   ![Formulario con errores](assets/05-errores-form-04.png)
+
+---
+
+# __Práctica: Formularios Reactivos y Validaciones (C)__
+## Descripción General
+
+Construir un formulario reactivo avanzado utilizando Angular Reactive Forms, integrando `FormArray` para manejar campos dinámicos, además de controles especiales como radio buttons, switches y checkboxes. También se reutilizó la clase utilitaria `FormUtils` para centralizar la validación y los mensajes de error de manera consistente dentro del formulario.
+
+---
+
+## Capturas de Pantalla
+
+### Estado inicial del formulario
+* **Descripción:** Vista inicial del formulario antes de ingresar datos, mostrando todos los controles dinámicos y especiales disponibles.
+* **Captura:**
+
+  ![Formulario Inicial](assets/05-form-vacio-05.png)
+
+---
+
+### Formulario con errores de validación
+* **Descripción:** Se muestran los mensajes de error generados al intentar enviar el formulario con datos inválidos o incompletos.
+* **Captura:**
+
+  ![Formulario con errores](assets/05-errores-validacion-06.png)
+
+---
+
+### Formulario válido y completo
+* **Descripción:** Formulario correctamente completado con todos los campos válidos y listos para ser enviados.
+* **Captura:**
+
+  ![Formulario válido](assets/05-form-valido-07.png)
+
+---
+
+### Objeto myForm.value en consola
+* **Descripción:** Resultado mostrado en consola con el objeto generado por `myForm.value` después del submit del formulario.
+* **Captura:**
+
+  ![Console Form Value](assets/05-form-console-08.png)

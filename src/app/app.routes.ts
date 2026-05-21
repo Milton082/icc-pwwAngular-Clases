@@ -6,6 +6,8 @@ import { StudentPage } from './features/students/pages/student-page/student-page
 import { LayoutsPage } from './features/layouts/pages/layouts-page/layouts-page';
 import { SignupPage } from './features/sign-up/page/signup-page/signup-page';
 import {ProfilePage } from './features/profile/pages/profile-page/profile-page';
+import {ProjectConfigPage} from './features/projects/pages/project-config-page/project-config-page';
+
 
 export const routes: Routes = [
   { path: ' ', component: HomePage },
@@ -14,6 +16,7 @@ export const routes: Routes = [
   { path: 'layouts', component: LayoutsPage }, 
   { path: 'signup', component: SignupPage },
   { path: 'profile', component: ProfilePage },
+  { path: 'project', component: ProjectConfigPage},
   //redireccionamiento
   { path: '**', redirectTo: ' ' },
 ];
