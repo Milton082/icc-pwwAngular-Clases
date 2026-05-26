@@ -1,21 +1,46 @@
-<section class="hero">
-  <h2>{{ title() |uppercase }}</h2>
-  <p>{{ subtitle() }}</p>
-
-  <button type="button" (click)="toggleMode()">Vista: {{ viewMode() }}</button>
-
-  @switch (viewMode()) {
-    @case ('lista') {
-      <ul>
-        @for (item of topics(); track item) {
-          <li>{{ item }}</li>
-        } @empty {
-          <p>No hay temas registrados.</p>
-        }
-      </ul>
-    }
-    @case ('resumen') {
-      <p>Total de temas: <strong>{{ topics().length }}</strong></p>
-    }
-  }
+<section
+  class="min-h-[80vh] flex flex-col justify-center items-center py-section-padding-mobile text-center relative"
+>
+  <div class="hero-glow -top-20 -left-20"></div>
+  <div class="hero-glow bottom-0 -right-20"></div>
+  <div
+    class="relative mb-8 w-48 h-48 md:w-64 md:h-64 rounded-full p-1 bg-gradient-to-tr from-primary to-secondary animate-pulse"
+  >
+    <div class="w-full h-full rounded-full overflow-hidden border-4 border-background">
+      <img
+        alt="Alex Dev Professional Portrait"
+        class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
+        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCggEs-_0tnzbf1glIglSuH61slDFZfpxRMab_muH5JxBjBo93EET-KPcXJDFCe4svTPuTx_lcGI9iwNNpXsIcidK5t6BH3ipzN4vxZ9BXCENwvRQ_xDozb2TD6eHtPSJJYTsogqVV27lTBzYD3n1gFdlNvR9DOs3aMfwJEFbpU_T31NzZLVFgHKhoNvQKU141Y9vs-sESn88_R-pX1XMzBu3bqHpyAkIEKltC0o0X4_Femble3CM_IowpqYzU4GOJEmH5KEacxZ2c"
+      />
+    </div>
+  </div>
+  <h1 class="font-headline-xl text-headline-xl md:text-headline-xl mb-4 text-on-surface">
+    Milton Dev
+  </h1>
+  <p class="font-headline-md text-headline-md text-primary mb-6">
+    Desarrollador de Software | Frontend &amp; Backend
+  </p>
+  <p
+    class="max-w-2xl mx-auto text-on-surface-variant font-body-lg text-body-lg mb-8 leading-relaxed"
+  >
+    Transformando visiones complejas en experiencias digitales elegantes. Especializado en
+    arquitectura de software escalable y interfaces de usuario minimalistas con un enfoque técnico
+    impecable.
+  </p>
+  <div class="flex gap-6 items-center">
+    <a class="text-on-surface-variant hover:text-primary transition-all duration-300" href="#">
+      <span class="material-symbols-outlined text-3xl" data-icon="code">code</span>
+    </a>
+    <a class="text-on-surface-variant hover:text-primary transition-all duration-300" href="#">
+      <span class="material-symbols-outlined text-3xl" data-icon="terminal">terminal</span>
+    </a>
+    <a
+      class="text-on-surface-variant hover:text-primary transition-all duration-300"
+      href="mailto:hello@alex.dev"
+    >
+      <span class="material-symbols-outlined text-3xl" data-icon="alternate_email"
+        >alternate_email</span
+      >
+    </a>
+  </div>
 </section>

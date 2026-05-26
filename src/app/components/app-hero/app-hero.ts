@@ -1,9 +1,9 @@
-import { UpperCasePipe } from '@angular/common';
+
 import { Component, computed, signal } from '@angular/core';
 
 @Component({
   selector: 'app-hero',
-  imports: [UpperCasePipe],
+  imports: [],
   templateUrl: './app-hero.html',
   styleUrl: './app-hero.css',
 })

@@ -1,24 +1,54 @@
-<footer class="footer">
-  <h3>Pipes de Angular</h3>
-  
-  <p class="pipe-item">
-    <strong>1. Date Pipe:</strong> {{ hoy | date:'longDate' }}
-  </p>
-  
-  <p class="pipe-item">
-    <strong>2. Currency Pipe:</strong> {{ costoCurso | currency:'USD' }}
-  </p>
+<footer class="mt-24 bg-gradient-to-b from-white to-gray-100 border-t border-gray-200 shadow-inner">
+  <div
+    class="max-w-7xl mx-auto px-6 py-14 flex flex-col md:flex-row items-center md:items-start justify-between gap-10"
+  >
+    <!-- Logo / Info -->
+    <div class="text-center md:text-left">
+      <h2 class="text-2xl font-extrabold tracking-wide text-gray-900 mb-3">MILTON.DEV</h2>
 
-  <p class="pipe-item">
-    <strong>3. Percent Pipe:</strong> {{ progreso() | percent }}
-  </p>
+      <p class="text-gray-500 text-sm mb-2">Frontend Developer • Angular Enthusiast</p>
 
-  <p class="pipe-item">
-    <strong>4. TitleCase Pipe:</strong> {{ estudiante | titlecase }}
-  </p>
+      <a
+        href="mailto:mchuqui@est.ups.edu.ec"
+        class="text-gray-700 hover:text-black transition-colors duration-300 underline underline-offset-4"
+      >
+        mchuqui@est.ups.edu.ec
+      </a>
+    </div>
 
-  <p class="pipe-item">
-    <strong>5. Json Pipe:</strong> 
-    <code>{{ configuracion | json }}</code>
-  </p>
+    <!-- Links -->
+    <div class="flex flex-col items-center gap-3">
+      <span class="text-sm uppercase tracking-[0.2em] text-gray-400"> Social </span>
+
+      <div class="flex gap-6">
+        <a
+          href="#"
+          class="text-gray-500 hover:text-black transition-all duration-300 hover:-translate-y-1"
+        >
+          GitHub
+        </a>
+
+        <a
+          href="#"
+          class="text-gray-500 hover:text-black transition-all duration-300 hover:-translate-y-1"
+        >
+          LinkedIn
+        </a>
+
+        <a
+          href="#"
+          class="text-gray-500 hover:text-black transition-all duration-300 hover:-translate-y-1"
+        >
+          Resume
+        </a>
+      </div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="text-center md:text-right">
+      <p class="text-gray-400 text-sm">© 2026 Milton.dev</p>
+
+      <p class="text-gray-500 text-sm mt-1">Designed with simplicity & elegance</p>
+    </div>
+  </div>
 </footer>
