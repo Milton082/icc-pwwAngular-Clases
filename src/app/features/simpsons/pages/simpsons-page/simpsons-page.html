@@ -2,6 +2,36 @@
 <p class="text-base-content/60 text-lg mb-6">
   Personajes de la serie — powered by The Simpsons API
 </p>
+
+@if (simpsonsResource.hasValue()) {
+  <!-- Controles de paginación -->
+  <div class="flex items-center justify-between gap-4 mb-6">
+    <span class="text-sm text-base-content/60">
+      Página {{ paginationService.currentPage() }} de {{ simpsonsResource.value()!.pages }}
+    </span>
+    <div class="join">
+      <a
+        class="join-item btn btn-sm"
+        [class.btn-disabled]="paginationService.currentPage() <= 1"
+        [routerLink]="[]"
+        [queryParams]="{ page: paginationService.currentPage() - 1 }"
+      >
+        «
+      </a>
+      <button class="join-item btn btn-sm btn-active">
+        {{ paginationService.currentPage() }}
+      </button>
+      <a
+        class="join-item btn btn-sm"
+        [class.btn-disabled]="paginationService.currentPage() >= simpsonsResource.value()!.pages"
+        [routerLink]="[]"
+        [queryParams]="{ page: paginationService.currentPage() + 1 }"
+      >
+        »
+      </a>
+    </div>
+  </div>
+}
 <!-- Estado de carga -->
 @if (simpsonsResource.isLoading()) {
   <div class="flex justify-center items-center h-64">

@@ -1,40 +1,51 @@
 <section class="space-y-10">
-
   <!-- HERO -->
 
   <section
-    class="rounded-4xl bg-linear-to-r from-pink-300 via-fuchsia-200 to-purple-300 p-10 shadow-xl"
+    class="relative overflow-hidden rounded-[2rem] bg-gradient-to-br from-slate-950 via-slate-900 to-indigo-950 p-10 shadow-2xl"
   >
+    <!-- Glow decorativo -->
+    <div class="absolute -top-24 -right-24 h-72 w-72 rounded-full bg-indigo-500/20 blur-3xl"></div>
 
-    <p class="text-sm font-bold uppercase tracking-[0.35em] text-white/90">
-      Angular 21 + TailwindCSS
-    </p>
+    <div class="absolute -bottom-24 -left-24 h-72 w-72 rounded-full bg-white/5 blur-3xl"></div>
 
-    <h1 class="mt-4 text-5xl font-black tracking-tight text-white">
-      UI Components Catalog
-    </h1>
+    <!-- Contenido -->
+    <div class="relative z-10">
+      <p class="text-sm font-semibold uppercase tracking-[0.35em] text-indigo-300">
+        Angular 21 + TailwindCSS
+      </p>
 
-    <p class="mt-5 max-w-2xl text-sm text-white/90">
-      Catálogo visual de componentes reutilizables desarrollados con Angular,
-      TailwindCSS y DaisyUI.
-    </p>
+      <h1 class="mt-4 max-w-3xl text-5xl font-black tracking-tight text-white">
+        UI Components
+        <span class="text-indigo-400">Catalog</span>
+      </h1>
 
-    <div class="mt-6 flex flex-wrap gap-3">
+      <p class="mt-5 max-w-2xl text-sm leading-relaxed text-slate-300">
+        Catálogo visual de componentes reutilizables desarrollados con Angular, TailwindCSS y
+        DaisyUI con un diseño moderno, minimalista y responsive.
+      </p>
 
-      <span class="badge border-none bg-white text-pink-500">
-        Responsive
-      </span>
+      <!-- Badges -->
+      <div class="mt-7 flex flex-wrap gap-3">
+        <span
+          class="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-medium text-slate-200 backdrop-blur-md"
+        >
+          Responsive
+        </span>
 
-      <span class="badge border-none bg-pink-100 text-fuchsia-600">
-        DaisyUI
-      </span>
+        <span
+          class="rounded-full border border-indigo-400/20 bg-indigo-500/10 px-4 py-2 text-sm font-medium text-indigo-300 backdrop-blur-md"
+        >
+          DaisyUI
+        </span>
 
-      <span class="badge border-none bg-purple-100 text-purple-700">
-        Angular 21
-      </span>
-
+        <span
+          class="rounded-full border border-slate-500/20 bg-slate-700/40 px-4 py-2 text-sm font-medium text-slate-200 backdrop-blur-md"
+        >
+          Angular 21
+        </span>
+      </div>
     </div>
-
   </section>
 
   <!-- CTA -->
@@ -48,153 +59,81 @@
   <!-- CARDS -->
 
   <section class="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+    <app-glass-stat-card label="Pantallas" value="12" helper="Diseños responsive" />
 
-    <app-glass-stat-card
-      label="Pantallas"
-      value="12"
-      helper="Diseños responsive"
-    />
+    <app-glass-stat-card label="Componentes" value="9" helper="UI reutilizable" />
 
-    <app-glass-stat-card
-      label="Componentes"
-      value="9"
-      helper="UI reutilizable"
-    />
+    <app-glass-stat-card label="Layouts" value="6" helper="Distribuciones modernas" />
 
-    <app-glass-stat-card
-      label="Layouts"
-      value="6"
-      helper="Distribuciones modernas"
-    />
-
-    <app-glass-stat-card
-      label="UI Score"
-      value="A+"
-      helper="Experiencia visual"
-    />
-
+    <app-glass-stat-card label="UI Score" value="A+" helper="Experiencia visual" />
   </section>
 
   <!-- GRID PRINCIPAL -->
 
   <section class="grid gap-6 lg:grid-cols-[2fr_1fr]">
-
     <!-- PANEL GRANDE -->
 
-    <article
-      class="rounded-4xl border border-pink-100 bg-white/70 p-8 shadow-xl backdrop-blur-md"
-    >
+    <article class="rounded-4xl border border-slate-200 bg-white p-8 shadow-xl">
+      <p class="text-sm font-bold uppercase tracking-[0.3em] text-indigo-900">Dashboard Layout</p>
 
-      <p class="text-sm font-bold uppercase tracking-[0.3em] text-fuchsia-500">
-        Dashboard Layout
-      </p>
-
-      <h2 class="mt-3 text-3xl font-black tracking-tight text-slate-800">
+      <h2 class="mt-3 text-3xl font-black tracking-tight text-slate-900">
         Distribución Responsive
       </h2>
 
-      <p class="mt-4 max-w-2xl text-sm text-slate-600">
+      <p class="mt-4 max-w-2xl text-sm text-slate-500">
         Diseño adaptable con componentes reutilizables usando TailwindCSS y DaisyUI.
       </p>
 
       <!-- MINI CARDS -->
 
       <div class="mt-8 grid gap-4 sm:grid-cols-2">
+        <div class="rounded-3xl bg-gradient-to-br from-slate-300 to-slate-50 p-5 shadow-sm">
+          <p class="font-bold text-slate-700">Glass UI</p>
 
-        <div
-          class="rounded-3xl bg-linear-to-r from-pink-100 to-rose-100 p-5 shadow-sm"
-        >
-
-          <p class="font-bold text-pink-700">
-            Glass UI
-          </p>
-
-          <p class="mt-2 text-sm text-slate-600">
-            Interfaces suaves con blur y transparencias.
-          </p>
-
+          <p class="mt-2 text-sm text-slate-500">Interfaces suaves con blur y transparencias.</p>
         </div>
 
-        <div
-          class="rounded-3xl bg-linear-to-r from-purple-100 to-fuchsia-100 p-5 shadow-sm"
-        >
+        <div class="rounded-3xl bg-gradient-to-br from-zinc-300 to-gray-50 p-5 shadow-sm">
+          <p class="font-bold text-zinc-700">Responsive</p>
 
-          <p class="font-bold text-purple-700">
-            Responsive
-          </p>
-
-          <p class="mt-2 text-sm text-slate-600">
-            Adaptación automática a móvil y desktop.
-          </p>
-
+          <p class="mt-2 text-sm text-slate-500">Adaptación automática a móvil y desktop.</p>
         </div>
 
-        <div
-          class="rounded-3xl bg-linear-to-r from-cyan-100 to-sky-100 p-5 shadow-sm"
-        >
+        <div class="rounded-3xl bg-gradient-to-br from-blue-300 to-sky-50 p-5 shadow-sm">
+          <p class="font-bold text-sky-700">TailwindCSS</p>
 
-          <p class="font-bold text-sky-700">
-            TailwindCSS
-          </p>
-
-          <p class="mt-2 text-sm text-slate-600">
-            Utility-first CSS moderno.
-          </p>
-
+          <p class="mt-2 text-sm text-slate-500">Utility-first CSS moderno.</p>
         </div>
 
-        <div
-          class="rounded-3xl bg-linear-to-r from-fuchsia-100 to-pink-100 p-5 shadow-sm"
-        >
+        <div class="rounded-3xl bg-gradient-to-br from-indigo-300 to-indigo-50 p-5 shadow-sm">
+          <p class="font-bold text-indigo-700">DaisyUI</p>
 
-          <p class="font-bold text-fuchsia-700">
-            DaisyUI
-          </p>
-
-          <p class="mt-2 text-sm text-slate-600">
-            Componentes visuales elegantes.
-          </p>
-
+          <p class="mt-2 text-sm text-slate-500">Componentes visuales elegantes.</p>
         </div>
-
       </div>
-
     </article>
 
     <!-- CHIPS -->
 
-    <app-feature-chip-list
-      [chips]="quickChips"
-      title="UI Features"
-    />
-
+    <app-feature-chip-list [chips]="quickChips" title="UI Features" />
   </section>
 
   <!-- SECCION EXTRA -->
 
   <section
-    class="rounded-4xl bg-linear-to-r from-fuchsia-200 via-pink-200 to-purple-200 p-10 shadow-xl"
+    class="rounded-4xl bg-gradient-to-br from-slate-950 via-slate-900 to-indigo-950 p-10 shadow-2xl"
   >
+    <p class="text-sm font-bold uppercase tracking-[0.3em] text-indigo-300">UI Design</p>
 
-    <p class="text-sm font-bold uppercase tracking-[0.3em] text-white/90">
-      UI Design
+    <h2 class="mt-3 text-4xl font-black text-white">Interfaz Moderna y Minimalista</h2>
+
+    <p class="mt-4 max-w-2xl text-sm text-slate-300">
+      Esta práctica implementa componentes standalone reutilizables con una experiencia visual
+      moderna inspirada en dashboards SaaS.
     </p>
 
-    <h2 class="mt-3 text-4xl font-black text-white">
-      Interfaz Moderna y Pastel
-    </h2>
-
-    <p class="mt-4 max-w-2xl text-sm text-white/90">
-      Esta práctica implementa componentes standalone reutilizables con una
-      experiencia visual moderna inspirada en dashboards SaaS.
-    </p>
-
-    <button
-      class="btn mt-6 border-none bg-white text-fuchsia-600 hover:bg-pink-100"
-    >
+    <button class="btn mt-6 border-none bg-white text-slate-900 hover:bg-slate-200">
       Ver Componentes
     </button>
-
   </section>
-
 </section>
