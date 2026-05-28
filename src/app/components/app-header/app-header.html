@@ -41,7 +41,7 @@
         </li>
 
         <li>
-          <a routerLink="/student" routerLinkActive="menu-active"> Estudiantes </a>
+          <a routerLink="/students" routerLinkActive="menu-active"> Estudiantes </a>
         </li>
 
         <li>
@@ -80,7 +80,17 @@
       </ul>
     </div>
 
-    <div class="navbar-end"></div>
+    <div class="navbar-end gap-2">
+      @if (currentUser()) {
+        <span class="hidden lg:block text-sm text-base-content/60">
+          {{ currentUser()!.email }}
+        </span>
+
+        <button class="btn btn-ghost btn-sm" (click)="logout()">Cerrar sesion</button>
+      } @else {
+        <a class="btn btn-primary btn-sm" routerLink="/auth"> Iniciar sesion </a>
+      }
+    </div>
   </div>
 
   <!-- MOVIL -->

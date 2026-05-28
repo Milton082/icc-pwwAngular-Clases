@@ -1,9 +1,11 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { rxResource } from '@angular/core/rxjs-interop';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { of, tap } from 'rxjs';
 import { SimpsonsCacheService } from '../../service/simpsons-cache.service';
 import { SimpsonsService } from '../../service/simpsons-page';
+import { AuthService } from '../../../../core/services/auth';
+import { Favorites } from '../../../../core/services/favorites';
 
 @Component({
   selector: 'app-simpson-detail-page',
@@ -14,7 +16,27 @@ export class SimpsonDetailPage {
   private route = inject(ActivatedRoute);
   private simpsonsService = inject(SimpsonsService);
   private cacheService = inject(SimpsonsCacheService);
+  authService = inject(AuthService);
+  private favoritesService = inject(Favorites);
 
+  isFavorite = signal(false);
+
+  toggleFavorite() {
+    const uid = this.authService.uid;
+    if (!uid) return; // No hace nada si no hay sesion activa.
+
+    if (this.isFavorite()) {
+      // Si ya es favorito, lo eliminamos de Firestore.
+      this.favoritesService.removeFavorite(uid, this.characterId).then(() => {
+        this.isFavorite.set(false);
+      });
+    } else {
+      // Si no es favorito, lo guardamos en Firestore.
+      this.favoritesService.addFavorite(uid, this.characterId).then(() => {
+        this.isFavorite.set(true);
+      });
+    }
+  }
   // Convertimos el parametro de ruta a numero.
   private characterId = Number(this.route.snapshot.paramMap.get('id'));
 

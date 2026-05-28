@@ -12,6 +12,23 @@
       <span>No se pudo cargar el personaje.</span>
     </div>
   }
+  @if (authService.currentUser()) {
+    <!-- Solo visible para usuarios autenticados. -->
+    <button
+      class="btn btn-outline btn-sm"
+      [class.btn-warning]="isFavorite()"
+      (click)="toggleFavorite()"
+    >
+      @if (isFavorite()) {
+        ★ Guardado en favoritos
+      } @else {
+        ☆ Agregar a favoritos
+      }
+    </button>
+  } @else {
+    <!-- Invita al usuario anonimo a autenticarse. -->
+    <a class="btn btn-ghost btn-sm" routerLink="/auth"> Inicia sesion para guardar favoritos </a>
+  }
 
   @if (characterResource.hasValue()) {
     <article class="card border border-base-300 bg-base-100 shadow-sm">
