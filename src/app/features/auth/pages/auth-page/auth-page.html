@@ -61,6 +61,15 @@
             Registrarse
           }
         </button>
+        <div class="divider">o</div>
+        <button
+          type="button"
+          class="btn btn-outline w-full"
+          (click)="loginGoogle()"
+          [disabled]="isLoading()"
+        >
+          Iniciar con Google
+        </button>
       </form>
 
       <!-- Enlace para alternar entre login y registro. -->
@@ -75,4 +84,5 @@
       </p>
     </div>
   </div>
+  <div class="divider">o</div>
 </section>

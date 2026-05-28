@@ -60,4 +60,18 @@ export class AuthPage {
       },
     });
   }
+  loginGoogle() {
+    this.isLoading.set(true);
+
+    this.authService.loginWithGoogle().subscribe({
+      next: () => {
+        this.isLoading.set(false);
+      },
+      error: (err) => {
+        console.error(err);
+        this.errorMessage.set('Error al iniciar con Google');
+        this.isLoading.set(false);
+      },
+    });
+  }
 }
